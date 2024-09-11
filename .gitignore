@@ -1,0 +1,8 @@
+# Editor and IDE config files
+.vscode
+.idea
+
+# Executables
+*.exe
+*.out
+*.app
