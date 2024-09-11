@@ -1,6 +1,6 @@
 # Major 1
 
-**Group Members**
+**Group Members & Responsibilities**
 
 - Elisabeth Nguyen: 
 - Corinna Martin:
