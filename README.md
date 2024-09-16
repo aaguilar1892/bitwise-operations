@@ -2,13 +2,13 @@
 
 ## Group Members and Responsibilities
 
-- Corinna Martin: TDB
+- Corinna Martin: clz.c
 
 - Alexis Aguilar: parity.c
 
-- Elizabeth Nguyen: TBD
+- Elizabeth Nguyen: endian.c
 
-- Nelli Salinas: TBD
+- Nelli Salinas: rotate.c
 
 - All: major1.h, major1.c
 
