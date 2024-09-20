@@ -8,12 +8,17 @@
 
 int CountLeadingZeroes(unsigned int num){
 
+        //Initialize # leading zeroes to = 0
         int leading0s = 0;
         unsigned int temp;
 
+        //Count each 0 bit from left to right until a 1 is reached
         for(int i = 31; i >= 0; --i){
+                //Shift right one to check next bit
                 temp = num >> i;
 
+                //If bit is a 1, stop counting
+                //Otherwise, increment # of leading zeroes
                 if(temp & 1){
                         return leading0s;
                 }
@@ -22,5 +27,6 @@ int CountLeadingZeroes(unsigned int num){
                 }
         }
 
+        //If all bits are zeroes, return # leading zeroes after loop
         return leading0s;
 }
