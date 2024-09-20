@@ -16,18 +16,24 @@ int main(){
     
         //Menu selection
         int choice;
+        int validNum = 0;
         scanf("%d", &choice);
 
         switch(choice){
             case 1:
-                //Prompt for integer between 1 and 4294967295, inclusively
-                printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
-                scanf("%d", &num);
+                while(validNum == 0){
+                    //Prompt for integer between 1 and 4294967295, inclusively
+                    printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
+                    scanf("%d", &num);
 
-                //Count Leading Zeroes
-                int leading0s = CountLeadingZeroes(num);
-                printf("\e[1mThe number of leading zeroes in %d is %d\n\e[m", num, leading0s);
-                break;
+                    if(num >= 1 && num <= 4294967295){
+                        //Count Leading Zeroes
+                        validNum = 1;
+                        int leading0s = CountLeadingZeroes(num);
+                        printf("\e[1mThe number of leading zeroes in %d is %d\n\e[m", num, leading0s);
+                    }
+                }
+                    break;
             case 2:
                 //Endian Swap
                 break;
