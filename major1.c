@@ -3,8 +3,6 @@
 int main(){
 
     //Display menu
-    int choice;
-
     printf("Enter the menu option for the operation to perform: \n");
     printf(" (1)  Count Leading Zeroes\n");
     printf(" (2)  Endian Swap\n");
@@ -14,6 +12,7 @@ int main(){
     printf(" -->  ");
     
     //Menu selection
+    int choice;
     scanf("%d", &choice);
     
     //Prompt for integer between 1 and 4294967295, inclusively
