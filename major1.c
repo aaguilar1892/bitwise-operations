@@ -33,6 +33,7 @@ int main(){
                 break;
             case 3:
                 //Rotate-right
+                //If “Rotate right” selected, prompt for 2nd int between 1 and 31, inclusively
                 break;
             case 4:
                 //Parity
@@ -44,9 +45,6 @@ int main(){
                 printf("Error: Invalid option. Please try again.\n");
         }
     }
-
-    //If “Rotate right” selected, prompt for 2nd int between 1 and 31, inclusively
-    //Call chosen operation function
 
     return 0;
 }
