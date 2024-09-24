@@ -43,6 +43,18 @@ int main(){
                 break;
             case 4:
                 //Parity
+                while(validNum == 0){
+                    // Prompt for a 32-bit number
+                    printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
+                    scanf("%d", &num);
+
+                    if(num >= 1 && num <= 4294967295){
+                        // Compute parity
+                        validNum = 1;
+                        int parity = compute_parity((unsigned int)num); // Call the function from parity.c
+                        printf("Parity of %d is %d\n", num, parity);  // Output result: 0 for even, 1 for odd
+                    }
+                }
                 break;
             case 5:
                 exit(1);
