@@ -52,7 +52,7 @@ int main(){
                         // Compute parity
                         validNum = 1;
                         int parity = compute_parity((unsigned int)num); // Call the function from parity.c
-                        printf("Parity of %d is %d\n", num, parity);  // Output result: 0 for even, 1 for odd
+                        printf("\e[1mParity of %d is %d\n\e[m", num, parity);  // Output result: 0 for even, 1 for odd
                     }
                 }
                 break;
