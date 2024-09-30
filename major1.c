@@ -1,9 +1,9 @@
 #include "major1.h"
 
+
 int main(){
     //Operand
-    int num;
-
+    unsigned int num;
     while(1==1){
         //Display menu
         printf("Enter the menu option for the operation to perform: \n");
@@ -18,24 +18,33 @@ int main(){
         int choice;
         int validNum = 0;
         scanf("%d", &choice);
-
         switch(choice){
             case 1:
                 while(validNum == 0){
                     //Prompt for integer between 1 and 4294967295, inclusively
                     printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
-                    scanf("%d", &num);
-
+                    scanf("%u", &num);
                     if(num >= 1 && num <= 4294967295){
                         //Count Leading Zeroes
                         validNum = 1;
                         int leading0s = CountLeadingZeroes(num);
-                        printf("\e[1mThe number of leading zeroes in %d is %d\n\e[m", num, leading0s);
+                        printf("\e[1mThe number of leading zeroes in %u is %d\n\e[m", num, leading0s);
                     }
                 }
                     break;
             case 2:
                 //Endian Swap
+                while(validNum == 0){
+                    // Prompt for a 32-bit number
+                    printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
+                    scanf("%u", &num);
+                    if(num >= 1 && num <= 4294967295){
+                        // Perform endian swap
+                        validNum = 1;
+                        unsigned int endSwapped = endianSwap((unsigned int)num);
+                        printf("\e[1mEndian swap of %u gives %u\n\e[m", num, endSwapped);
+                    }
+                }
                 break;
             case 3:
                 //Rotate-right
@@ -46,13 +55,12 @@ int main(){
                 while(validNum == 0){
                     // Prompt for a 32-bit number
                     printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
-                    scanf("%d", &num);
-
+                    scanf("%u", &num);
                     if(num >= 1 && num <= 4294967295){
                         // Compute parity
                         validNum = 1;
                         int parity = compute_parity((unsigned int)num); // Call the function from parity.c
-                        printf("\e[1mParity of %d is %d\n\e[m", num, parity);  // Output result: 0 for even, 1 for odd
+                        printf("\e[1mParity of %u is %d\n\e[m", num, parity);  // Output result: 0 for even, 1 for odd
                     }
                 }
                 break;
@@ -63,6 +71,5 @@ int main(){
                 printf("Error: Invalid option. Please try again.\n");
         }
     }
-
     return 0;
 }
