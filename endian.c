@@ -1,6 +1,5 @@
 #include "major1.h"
-//stdio.h only needed for testing
-//#include <stdio.h>
+
 //FOR TESTING PURPOSES - prints the number in binary, split up by tabs to easily see bytes
 /*
 void printBin(int num) {
