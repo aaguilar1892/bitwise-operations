@@ -54,12 +54,12 @@ int main(){
 			scanf("%u", &num);
 			unsigned int pos;// Used to store the number of bit positions to be shifted
 			printf("Enter number of positions to rotate-right the input (between 0 and 31, inclusively): ");
-			scanf("%d", &pos);
+			scanf("%u", &pos);
 			if ( (num >= 1 && num <= 4294967295) && (pos >= 0 && pos <= 31)){
 				// Perform bit rotation
 				validNum = 1;
 				unsigned int rotate = RotateInt((unsigned int) num, (unsigned int) pos); // Call the rotate function
-				printf("\e[1m%u rotated by %d positions gives: %u\n\e[m", num, pos, rotate);// Outputs: Rotated num
+				printf("\e[1m%u rotated by %u positions gives: %u\n\e[m", num, pos, rotate);// Outputs: Rotated num
 			}
 		}
                 break;
