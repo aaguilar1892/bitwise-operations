@@ -14,7 +14,7 @@
 
 ## Program Description
 
-- **clz.c**: TODO
+- **clz.c**: The function takes a 32-bit unsigned integer as input. It then uses bitwise operations to compute the number of leading 0's in the binary representation of the integer. The AND operation (&) is used to detect the first 1 bit and return the number of leading 0 bits, otherwise the number of leading 0's is incremented by one.
 
 - **endian.c**: TODO
 
