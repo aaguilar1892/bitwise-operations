@@ -18,7 +18,7 @@
 
 - **endian.c**: The function endianSwap() takes a 32-bit unsigned integer as input. It uses bitwise operators to swap the endianness of the input. E.g. if the input is in big endian format, it will switch to little endian format and vice versa. The function isolates each byte using left and right shifts, and then reverses the order of the bytes to change the endianness.
 
-- **rotate.c**: TODO
+- **rotate.c**: The function takes two 32-bit unsigned integers, one as input and the other as the number of places the input will be rotated by. The function utilizes both the right shift and left shift operations in order to rotate the input. To combine the outcomes of both the right shift and left shift operations the OR operation (|) is used. The function then returns the outcome of the OR operation.
 
 - **parity.c**: The function takes a 32-bit unsigned integer as input. It uses bitwise operations to compute the number of 1’s in the binary representation of the integer. The XOR operation (^=) is used to toggle the parity variable whenever a 1 is found. The function returns 0 for even parity and 1 for odd parity.
 
