@@ -48,7 +48,20 @@ int main(){
                 break;
             case 3:
                 //Rotate-right
-                //If “Rotate right” selected, prompt for 2nd int between 1 and 31, inclusively
+		while(validNum == 0){
+			//Prompt for a 32-bit number and number of shift positions
+			printf("Enter a 32-bit number (>= 1 and <= 4294967295, inclusively): ");
+			scanf("%u", &num);
+			unsigned int pos;// Used to store the number of bit positions to be shifted
+			printf("Enter number of positions to rotate-right the input (between 0 and 31, inclusively): ");
+			scanf("%d", &pos);
+			if ( (num >= 1 && num <= 4294967295) && (pos >= 0 && pos <= 31)){
+				// Perform bit rotation
+				validNum = 1;
+				unsigned int rotate = RotateInt((unsigned int) num, (unsigned int) pos); // Call the rotate function
+				printf("\e[1m%u rotated by %d positions gives: %u\n\e[m", num, pos, rotate);// Outputs: Rotated num
+			}
+		}
                 break;
             case 4:
                 //Parity
