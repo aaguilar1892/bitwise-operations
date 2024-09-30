@@ -22,9 +22,9 @@
 
 - **parity.c**: The function takes a 32-bit unsigned integer as input. It uses bitwise operations to compute the number of 1’s in the binary representation of the integer. The XOR operation (^=) is used to toggle the parity variable whenever a 1 is found. The function returns 0 for even parity and 1 for odd parity.
 
-- **major1.c**: TODO
+- **major1.c**: This file outputs the menu and allows the user to select which operation to perform.
 
-- **major1.h**: TODO
+- **major1.h**: This file contains the function prototypes for the count leading 0's, parity, endian swap, and rotate right operations.
 
 ## Compilation Methods
 
