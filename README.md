@@ -16,7 +16,7 @@
 
 - **clz.c**: The function takes a 32-bit unsigned integer as input. It then uses bitwise operations to compute the number of leading 0's in the binary representation of the integer. The AND operation (&) is used to detect the first 1 bit and return the number of leading 0 bits, otherwise the number of leading 0's is incremented by one.
 
-- **endian.c**: TODO
+- **endian.c**: The function endianSwap() takes a 32-bit unsigned integer as input. It uses bitwise operators to swap the endianness of the input. E.g. if the input is in big endian format, it will switch to little endian format and vice versa. The function isolates each byte using left and right shifts, and then reverses the order of the bytes to change the endianness.
 
 - **rotate.c**: TODO
 
@@ -40,7 +40,8 @@ To compile the files manually from the terminal, you will have to type out the c
 
 `gcc -Wall -o bitwisemenu major1.c clz.c endian.c rotate.c parity.c`
 
-Executing the command will create an executable file called bitwisemenu.
+## Execution
+Both of the compilation methods will create an executable file called bitwisemenu.
 
 To execute it, type `./bitwisemenu` into the terminal.
 
